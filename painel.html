@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Painel de Notas</title>
+
+    <style>
+        .grupoATitle {
+            background-color: #130E6E;
+            height: 40px;
+            width: 500px;
+            border-radius: 20px;
+            text-align-last: center;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 1%;
+        }
+
+        .grupoBTitle {
+            background-color: #FB1009;
+            height: 40px;
+            width: 500px;
+            border-radius: 20px;
+            text-align-last: center;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row mt-5">
+            <div class="col-6">
+                <select class="form-select" id="menuNomes">
+                    <option value="">Selecione um nome</option>
+                    <option value="ATL1">ALENCASTRE HONORIO MOURA</option>
+                    <option value="ATL2">JOSE AUGUSTO SILVA JUNIOR</option>
+                    <option value="ATL3">CARLOS LEON DE JESUS BORGES</option>
+                    <option value="ATL4">MARCOS VINICIUS SANTOS DE ASSIS</option>
+                    <option value="ATL5">PALOMA SANTOS COSTA</option>
+                    <option value="ATL6">DANIEL FONTES DE JESUS FREITAS</option>
+                    <option value="ATL7">WALTER RAMOS DE JESUS SILVA</option>
+                    <option value="ATL8">GABRIEL REGIO SILVA FREIRE</option>
+                    <option value="ATL9">ISAAC AUGUSTO DO NASCIMENTO</option>
+                    <option value="ATL10">RAFAEL VASCONCELOS BARROSO JUNIOR</option>
+                    <option value="ATL11">JOSE AUGUSTO SILVA JUNIOR</option>
+                    <option value="ATL12">MARCIO BRUNO FREITAS</option>
+                    <option value="ATL13">ROGERIO PARANHOS MAGALHAES</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success" onclick="exibirNome()">Exibir nome</button>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <input class="form-control" type="text" id="nome" placeholder="Nome">
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success" onclick="MostrarNome()">Mostrar Nome</button>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6">
+                <input class="form-control" type="number" id="numero1" placeholder="Nota">
+
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success" onclick="MostrarNota()">Mostrar Nota</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-danger mt-3" onclick="limparValores()">Limpar Placar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grupoATitle"><label>GRUPO A</span></div>
+                <div class="row mt-2">
+
+                    <div class="col-lg-2 col-md-12">
+                        <input class="form-control" type="numer" id="M1GA" placeholder="M1">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="M2GA" placeholder="M2">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="M3GA" placeholder="M3">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="M4GA" placeholder="M4">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="MFGA" placeholder="MF" disabled>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grupoBTitle"><label>GRUPO B</span></div>
+                <div class="row mt-2">
+
+                    <div class="col-lg-2 col-md-12">
+                        <input class="form-control" type="numer" id="M1GB" placeholder="M1">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="M2GB" placeholder="M2">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="M3GB" placeholder="M3">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6">
+                        <input class="form-control" type="numer" id="MFGB" placeholder="MF" disabled>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-success" onclick="calcularNotaFinal()">Mostrar Nota Final</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
